@@ -1,0 +1,19 @@
+$bodyColor: #343539;
+$fontColor: #fff;
+
+.page {
+  max-width: 1580px;
+  background: $bodyColor;
+  margin: 42px auto 0;
+  padding: 0 165px 0;
+  & .page__title {
+    margin: 0;
+    color: $fontColor;
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 68px;
+    /* letter-spacing: 1.6px; */
+  }
+}

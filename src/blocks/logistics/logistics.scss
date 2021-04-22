@@ -1,0 +1,58 @@
+$sectionNumberColor: #EF483E;
+
+.logistics {
+  max-width: 728px;
+  & .logistics__route {
+    border: none;
+    margin: 0;
+    padding: 20px 5px 0;
+  }
+  & .logistics__title {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: #FFF;
+    &::before {
+      margin-right: 9px;
+      width: 24px;
+      height: 24px;
+      background-color: $sectionNumberColor;
+      font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &.logistics__title_first::before {
+      content: "1";
+    }
+    &.logistics__title_second::before {
+      content: "2";
+    }
+    &.logistics__title_third::before {
+      content: "3";
+    }
+    &.logistics__title_fourth::before {
+      content: "4";
+    }
+  }
+  & .logistics__label {
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: white;
+  }
+}
