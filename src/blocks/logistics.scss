@@ -63,7 +63,6 @@ $sectionNumberColor: #ef483e;
 
   & .logistics__label {
     position: relative;
-
     clear: both;
     display: flex;
     flex-direction: column;
@@ -75,16 +74,19 @@ $sectionNumberColor: #ef483e;
     line-height: 16px;
     color: white;
 
-    &::after {
+    &.logistics__label_discoloration::after {
       position: absolute;
       top: 40px;
       right: 40px;
-      display: inline-block;
       content: "";
       width: 40px;
       height: 40px;
       background: linear-gradient(90deg, rgba(255, 255, 255, 0), #fff 45%);
       pointer-events: none;
+    }
+
+    &.logistics__label_checkbox {
+      flex-direction: row;
     }
 
     &.logistics__label_middle {

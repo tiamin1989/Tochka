@@ -23,7 +23,7 @@
       </fieldset>
       <fieldset class="logistics__field">
         <legend class="logistics__legend logistics__legend_second">Транспорт</legend>
-        <label class="logistics__label logistics__label_short" for="capacity">
+        <label class="logistics__label logistics__label_short logistics__label_discoloration" for="capacity">
           <span class="logistics__label-text">Грузоподъёмность</span>
           <select class="logistics__label-input-select" name="capacity" id="capacity">
             <option class="logistics__label-select-option logistics__label-select-option_default">Не выбрана</option>
@@ -35,10 +35,10 @@
             <option class="logistics__label-select-option">до 20 тонн</option>
           </select>
         </label>
-        <label class="logistics__label logistics__label_short" for="shipment">
+        <label class="logistics__label logistics__label_short logistics__label_discoloration" for="shipment">
           <span class="logistics__label-text">Способ погрузки</span>
           <select class="logistics__label-input-select" name="shipment" id="shipment">
-            <option class="logistics__label-select-option logistics__label-select-option_default">Не выбрана</option>
+            <option class="logistics__label-select-option logistics__label-select-option_default">Не выбран</option>
             <option class="logistics__label-select-option" selected>Задняя</option>
             <option class="logistics__label-select-option">Боковая</option>
             <option class="logistics__label-select-option">Верхняя</option>
@@ -48,17 +48,17 @@
 
       <fieldset class="logistics__field">
         <legend class="logistics__legend logistics__legend_third">Груз</legend>
-        <label class="logistics__label logistics__label_middle" for="cargo">
+        <label class="logistics__label logistics__label_middle logistics__label_discoloration" for="cargo">
           <span class="logistics__label-text">Тип груза</span>
           <select class="logistics__label-input-select" name="cargo" id="cargo">
             <option class="logistics__label-select-option logistics__label-select-option_default">Не выбран</option>
           </select>
         </label>
 
-        <label class="logistics__label logistics__label_short" for="danger">
+        <label class="logistics__label logistics__label_short logistics__label_discoloration" for="danger">
           <span class="logistics__label-text">Класс опасности</span>
           <select class="logistics__label-input-select" name="danger" id="danger">
-            <option class="logistics__label-select-option logistics__label-select-option_default">Не выбрана</option>
+            <option class="logistics__label-select-option logistics__label-select-option_default">Не выбран</option>
             <option class="logistics__label-select-option">Класс 1 - Взрывчатые вещества</option>
             <option class="logistics__label-select-option">Класс 2 - Газы: сжатые, сжиженные или растворенные под давлением</option>
             <option class="logistics__label-select-option">Класс 3 - Легковоспламеняющиеся жидкости</option>
@@ -72,12 +72,17 @@
           </select>
         </label>
 
-        <label class="logistics__label logistics__label_short" for="worth">
+        <label class="logistics__label logistics__label_short logistics__label_discoloration" for="worth">
           <span class="logistics__label-text">Объявленная ценность, &#8381;</span>
           <select class="logistics__label-input-select" name="worth" id="worth">
             <option class="logistics__label-select-option logistics__label-select-option_default" selected>&ge; 1</option>
             <option class="logistics__label-select-option">&#61; 0</option>
           </select>
+        </label>
+
+        <label class="logistics__label logistics__label_checkbox" for="regime">
+          <input class="logistics__checkbox" type="checkbox" name="regime" id="regime">
+          <span class="logistics__label-text">Требуется температурный режим</span>
         </label>
 
       </fieldset>
