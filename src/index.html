@@ -10,15 +10,48 @@
     <!-- <img src="<%=require('./img/logo.png')%>" alt="Логотип" /> -->
     <h1 class="page__title">FTL: Прямая машина</h1>
     <form action="./index.html" class="logistics">
-      <fieldset class="logistics__route">
-        <h2 class="logistics__title logistics__title_first">Маршрут</h2>
+      <fieldset class="logistics__field">
+        <legend class="logistics__legend logistics__legend_first">Маршрут</legend>
         <label class="logistics__label" for="from">
-          <span>Откуда</span>
-          <input type="text" name="from" id="from">
+          <span class="logistics__label-text">Откуда</span>
+          <input class="logistics__label-input-text" type="text" name="from" id="from">
         </label>
         <label class="logistics__label" for="to">
-          <span>Куда</span>
-          <input type="text" name="to" id="to">
+          <span class="logistics__label-text">Куда</span>
+          <input class="logistics__label-input-text" type="text" name="to" id="to">
+        </label>
+      </fieldset>
+      <fieldset class="logistics__field">
+        <legend class="logistics__legend logistics__legend_second">Транспорт</legend>
+        <label class="logistics__label logistics__label_short" for="capacity">
+          <span class="logistics__label-text">Грузоподъёмность</span>
+          <select class="logistics__label-input-select" name="capacity" id="capacity">
+            <option class="logistics__label-select-option logistics__label-select-option_default">Не выбрана</option>
+            <option class="logistics__label-select-option" value="1">до 1 тонны</option>
+            <option class="logistics__label-select-option" value="2">до 2 тонн</option>
+            <option class="logistics__label-select-option" value="3">до 3 тонн</option>
+            <option class="logistics__label-select-option" value="5">до 5 тонн</option>
+            <option class="logistics__label-select-option" value="10">до 10 тонн</option>
+            <option class="logistics__label-select-option" value="20">до 20 тонн</option>
+          </select>
+        </label>
+        <label class="logistics__label logistics__label_short" for="shipment">
+          <span class="logistics__label-text">Способ погрузки</span>
+          <select class="logistics__label-input-select" name="shipment" id="shipment">
+            <option class="logistics__label-select-option logistics__label-select-option_default">Не выбрана</option>
+            <option class="logistics__label-select-option">Задняя</option>
+            <option class="logistics__label-select-option">Передняя</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <fieldset class="logistics__field">
+        <legend class="logistics__legend logistics__legend_third">Груз</legend>
+        <label class="logistics__label" for="cargo">
+          <span class="logistics__label-text">Тип груза</span>
+          <select class="logistics__label-input-select" name="cargo" id="cargo">
+            <option class="logistics__label-select-option logistics__label-select-option_default">Не выбран</option>
+          </select>
         </label>
       </fieldset>
     </form>

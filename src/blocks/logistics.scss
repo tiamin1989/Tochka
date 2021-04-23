@@ -1,0 +1,124 @@
+$sectionNumberColor: #ef483e;
+
+.logistics {
+  max-width: 738px;
+
+  & .logistics__field {
+    border: none;
+    margin: 0;
+    padding: 19px 5px 0;
+  }
+
+  & .logistics__field:not(:first-child) {
+    margin: 22px 0 0;
+  }
+
+  & .logistics__legend {
+    float: left;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: #fff;
+
+    &::before {
+      margin-right: 8px;
+      width: 24px;
+      height: 24px;
+      background-color: $sectionNumberColor;
+      font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &.logistics__legend_first::before {
+      content: "1";
+    }
+
+    &.logistics__legend_second::before {
+      content: "2";
+    }
+
+    &.logistics__legend_third::before {
+      content: "3";
+    }
+
+    &.logistics__legend_fourth::before {
+      content: "4";
+    }
+  }
+
+  & .logistics__label {
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0 0;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: white;
+
+    &.logistics__label_short {
+      clear: none;
+      float: left;
+    }
+
+    & .logistics__label-text {
+      margin-bottom: 7px;
+    }
+
+    & .logistics__label-input-text {
+      box-sizing: border-box;
+      min-height: 45px;
+      padding: 5px 14px;
+      &:focus {
+        outline: none;
+      }
+    }
+
+    & .logistics__label-input-select {
+      display: inline-block;
+      appearance: none;
+      box-sizing: border-box;
+      max-width: 356px;
+      min-width: 172px;
+      min-height: 45px;
+      margin-right: 10px;
+      padding: 5px 14px;
+      background: url("../img/select-arrow.svg") #fff no-repeat 90%;
+      font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 18px;
+      color: #cfcfcf;
+
+      & .logistics__label-select-option:not(:first-child) {
+        color: #000;
+      }
+
+      & .logistics__label-select-option:hover {
+        background-color: $sectionNumberColor;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
