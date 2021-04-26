@@ -10,6 +10,10 @@ $sectionNumberColor: #ef483e;
     margin: 0;
     padding: 0;
 
+    & .ftl__checkbox-wrapper {
+      display: flex;
+    }
+
     & .ftl__row-wrapper {
       display: flex;
     }
@@ -70,7 +74,21 @@ $sectionNumberColor: #ef483e;
       display: flex;
       flex-direction: column;
 
-      &.ftl__wrapper_margin-right {
+      & .ftl__input-checkbox {
+        margin-right: 12px;
+        width: 24px;
+        height: 24px;
+        border: 2px solid #FFFFFF;
+      }
+
+      &.ftl__wrapper_row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 16px 0 0;
+      }
+
+      &.ftl__wrapper_margin {
         margin-right: 12px;
       }
 
@@ -82,6 +100,10 @@ $sectionNumberColor: #ef483e;
         font-size: 13px;
         line-height: 16px;
         color: #fff;
+      }
+
+      & .ftl__label_checkbox {
+        margin: 0;
       }
 
       & .ftl__input-text {
@@ -126,7 +148,7 @@ $sectionNumberColor: #ef483e;
           z-index: 1;
           top: 0;
           right: 0;
-          width: 50px;
+          width: 80px;
           height: 100%;
           background: url("../img/select-arrow.svg") no-repeat right 15px center,
             linear-gradient(to right, transparent, #fff 35%);
