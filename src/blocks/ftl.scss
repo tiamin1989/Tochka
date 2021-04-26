@@ -103,10 +103,22 @@ $sectionNumberColor: #ef483e;
       flex-direction: column;
 
       & .ftl__input-checkbox {
+        display: none;
+      }
+
+      & .ftl__input-checkbox-pseudo {
+        box-sizing: border-box;
         margin-right: 12px;
-        width: 24px;
-        height: 24px;
-        border: 2px solid #ffffff;
+        width: 21px;
+        height: 21px;
+        background: transparent;
+        border: 2px solid #fff;
+
+
+        &.ftl__input-checkbox-pseudo_checked {
+          border: 0;
+          background: url("../img/check.svg") no-repeat center center, #ef483e;
+        }
       }
 
       &.ftl__wrapper_row {
@@ -128,10 +140,14 @@ $sectionNumberColor: #ef483e;
         font-size: 13px;
         line-height: 16px;
         color: #fff;
-      }
 
-      & .ftl__label_checkbox {
-        margin: 0;
+        &.ftl__label_checkbox {
+          height: 100%;
+          margin: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
       }
 
       & .ftl__input-text {
@@ -176,7 +192,7 @@ $sectionNumberColor: #ef483e;
       & .ftl__select-wrapper {
         position: relative;
         // temporary
-        &.ftl__min-height-45 {
+        &.ftl__45 {
           min-height: 45px;
         }
 

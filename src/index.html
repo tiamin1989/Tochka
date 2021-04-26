@@ -28,7 +28,7 @@
         <div class="ftl__row-wrapper">
           <div class="ftl__wrapper ftl__wrapper_margin">
             <label class="ftl__label" for="capacity">Грузоподъёмность</label>
-            <div class="ftl__select-wrapper ftl__select-wrapper_small ftl__min-height-45">
+            <div class="ftl__select-wrapper ftl__select-wrapper_small ftl__45">
               <select class="ftl__select" name="capacity" id="capacity">
                 <option class="ftl__select-option ftl__select-option_default">Не выбрана</option>
                 <option class="ftl__select-option">до 1 тонны</option>
@@ -42,7 +42,7 @@
           </div>
           <div class="ftl__wrapper" >
             <label class="ftl__label" for="shipment">Способ погрузки</label>
-            <div class="ftl__select-wrapper ftl__select-wrapper_small ftl__min-height-45">
+            <div class="ftl__select-wrapper ftl__select-wrapper_small ftl__45">
               <select class="ftl__select" name="shipment" id="shipment">
                 <option class="ftl__select-option  ftl__select-option_default" selected>Задняя</option>
                 <option class="ftl__select-option">Боковая</option>
@@ -57,7 +57,7 @@
         <legend class="ftl__legend ftl__legend_third">Груз</legend>
         <div class="ftl__wrapper ftl__wrapper_margin">
           <label class="ftl__label" for="type">Тип груза</label>
-          <div class="ftl__select-wrapper ftl__select-wrapper_middle ftl__min-height-45">
+          <div class="ftl__select-wrapper ftl__select-wrapper_middle ftl__45">
             <select class="ftl__select" name="type" id="type">
               <option class="ftl__select-option ftl__select-option_default">Не выбрана</option>
               <option class="ftl__select-option">Наливной</option>
@@ -72,7 +72,7 @@
         <div class="ftl__row-wrapper">
           <div class="ftl__wrapper ftl__wrapper_margin">
             <label class="ftl__label" for="danger">Класс опасности</label>
-            <div class="ftl__select-wrapper ftl__select-wrapper_small ftl__min-height-45">
+            <div class="ftl__select-wrapper ftl__select-wrapper_small ftl__45">
               <select class="ftl__select" name="danger" id="danger">
                 <option class="ftl__select-option ftl__select-option_default">Не выбрана</option>
                 <option class="ftl__select-option">Класс 1 - Взрывчатые вещества</option>
@@ -95,18 +95,21 @@
         </div>
 
         <div class="ftl__wrapper ftl__wrapper_row" >
-          <input class="ftl__input-checkbox" type="checkbox" name="temperature" id="temperature">
+          <input class="ftl__input-checkbox" wfd-invisible="true" type="checkbox" name="temperature" id="temperature">
+          <div class="ftl__input-checkbox-pseudo" id="temperature-pseudo"></div>
           <label class="ftl__label ftl__label_checkbox" for="temperature">Требуется температурный режим</label>
         </div>
 
-      <div class="ftl__row-wrapper">
-        <div class="ftl__wrapper ftl__wrapper_margin" >
-          <label class="ftl__label" for="price">От, &#8451;</label>
-          <input class="ftl__input-text ftl__input-text_small" type="text" placeholder="-20" name="price" id="price">
-        </div>
-        <div class="ftl__wrapper" >
-          <label class="ftl__label" for="price">До, &#8451;</label>
-          <input class="ftl__input-text ftl__input-text_small" type="text" placeholder="+23" name="price" id="price">
+      <div class="page__wrapper" id="temperature-wrapper">
+        <div class="ftl__row-wrapper">
+          <div class="ftl__wrapper ftl__wrapper_margin" >
+            <label class="ftl__label" for="temperature-from">От, &#8451;</label>
+            <input class="ftl__input-text ftl__input-text_small" type="text" placeholder="-20" name="temperature-from" id="temperature-from">
+          </div>
+          <div class="ftl__wrapper" >
+            <label class="ftl__label" for="temperature-to">До, &#8451;</label>
+            <input class="ftl__input-text ftl__input-text_small" type="text" placeholder="+23" name="temperature-to" id="temperature-to">
+          </div>
         </div>
       </div>
 
