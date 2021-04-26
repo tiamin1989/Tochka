@@ -1,3 +1,5 @@
+@import "../../node_modules/mq-scss/mq";
+
 $bodyColor: #343539;
 $fontColor: #fff;
 
@@ -5,14 +7,28 @@ $fontColor: #fff;
   max-width: 1580px;
   background: $bodyColor;
   margin: 42px auto 0;
-  padding: 0 165px 0;
+  padding: 0 10.7vw 0;
+
+  @include mq(max, 940px) {
+    padding: 0 6vw 0;
+  }
+
+  @include mq(max, 440px) {
+    padding: 0 16px 0;
+  }
+
   & .page__title {
     margin: 0;
     color: $fontColor;
-    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 56px;
     line-height: 68px;
+
+    @include mq(max, 940px) {
+      font-size: 32px;
+      line-height: 40px;
+    }
   }
 }

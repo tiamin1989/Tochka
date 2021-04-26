@@ -1,3 +1,5 @@
+@import "../../node_modules/mq-scss/mq";
+
 $sectionNumberColor: #ef483e;
 
 .ftl {
@@ -9,6 +11,27 @@ $sectionNumberColor: #ef483e;
     border: 0;
     margin: 0;
     padding: 0;
+
+    & .ftl__field-address {
+      display: flex;
+      flex-direction: column;
+      padding: 17px 0 0;
+
+      & .ftl__field-address-wrapper {
+        display: flex;
+        justify-content: space-between;
+        max-width: 730px;
+
+        & .ftl__field-address-text {
+          font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 13px;
+          line-height: 16px;
+          color: #ffffff;
+        }
+      }
+    }
 
     & .ftl__checkbox-wrapper {
       display: flex;
@@ -39,6 +62,11 @@ $sectionNumberColor: #ef483e;
       font-size: 24px;
       line-height: 30px;
       color: #fff;
+
+      @include mq(max, 440px) {
+        font-size: 20px;
+        line-height: 24px;
+      }
 
       &::before {
         display: flex;
@@ -78,14 +106,14 @@ $sectionNumberColor: #ef483e;
         margin-right: 12px;
         width: 24px;
         height: 24px;
-        border: 2px solid #FFFFFF;
+        border: 2px solid #ffffff;
       }
 
       &.ftl__wrapper_row {
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding: 16px 0 0;
+        padding: 13px 0 0;
       }
 
       &.ftl__wrapper_margin {
@@ -111,10 +139,29 @@ $sectionNumberColor: #ef483e;
         min-height: 45px;
         padding: 5px 14px;
         outline: none;
+        font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 18px;
+        color: #000;
+
+        &::placeholder {
+          font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 15px;
+          line-height: 18px;
+          color: #cfcfcf;
+        }
       }
 
       & .ftl__input-text_small {
         max-width: 175px;
+
+        @include mq(max, 440px) {
+          max-width: 167px;
+        }
       }
 
       & .ftl__input-text::placeholder {
@@ -135,10 +182,18 @@ $sectionNumberColor: #ef483e;
 
         &.ftl__select-wrapper_middle {
           max-width: 358px;
+
+          @include mq(max, 440px) {
+            width: 343px;
+          }
         }
 
         &.ftl__select-wrapper_small {
           min-width: 172px;
+
+          @include mq(max, 440px) {
+            min-width: 165px;
+          }
         }
 
         &::after {
