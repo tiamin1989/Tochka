@@ -1,42 +1,48 @@
 import "./index.scss";
 
-const selects = document.querySelectorAll(".logistics__label-input-select");
-
-const textWrapper = document.querySelector(".page__text-length");
+const selectHeight = 45;
+const optionHeight = 28;
+const selects = document.querySelectorAll(".ftl__select");
+const isFirefox = typeof InstallTrigger !== "undefined";
 
 const checkSelectColor = (select) => {
-  const defaultOption = select.querySelector(
-    ".logistics__label-select-option_default"
-  );
-  if (defaultOption.textContent !== select.value)
-    select.style.color = "#000";
+  const defaultOption = select.querySelector(".ftl__select-option_default");
+  if (defaultOption.textContent !== select.value) select.style.color = "#000";
   else {
     select.style.color = "#cfcfcf";
   }
   select.size = "1";
+  select.style.height = `${selectHeight}px`;
+  // firefox
+  if (isFirefox) select.style.textIndent = "5px";
   select.blur();
-}
+};
 
-const selectOnFocus = (select, optionsCount) => {
-  select.size = `${optionsCount}`;
-  select.style.position = "relative";
-  select.style.zIndex = "1";
-  select.style.width = "max-content";
-}
+const selectOnFocus = (select, options) => {
+  select.style.zIndex = "2";
+  select.selectedIndex = -1;
+  select.size = `${options.length}`;
+  // firefox & other browsers
+  isFirefox
+    ? (select.style.height = `${optionHeight * options.length + selectHeight}px`)
+    : (select.style.height = `${
+        optionHeight * (options.length - 1) + selectHeight + 7
+      }px`);
+};
 
-const selectOnBlur = (select, selectOffsetWidth) => {
-  select.size = "0";
-  select.style.position = "unset";
+const selectOnBlur = (select) => {
   select.style.zIndex = "0";
-  select.style.width = `${selectOffsetWidth}px`;
-}
+  select.size = "0";
+  select.style.height = `${selectHeight}px`;
+};
 
 selects.forEach((select) => {
-  const selectOffsetWidth = select.offsetWidth;
-  const options = select.querySelectorAll('option');
+  const options = select.querySelectorAll("option");
 
   checkSelectColor(select);
   select.addEventListener("change", (evt) => checkSelectColor(select));
-  select.addEventListener("focus", (evt) => selectOnFocus(select, options.length));
-  select.addEventListener("blur", (evt) => selectOnBlur(select, selectOffsetWidth));
+  select.addEventListener("focus", (evt) =>
+    selectOnFocus(select, options)
+  );
+  select.addEventListener("blur", (evt) => selectOnBlur(select));
 });

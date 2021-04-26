@@ -1,0 +1,203 @@
+$sectionNumberColor: #ef483e;
+
+.ftl {
+  max-width: 730px;
+  padding: 19px 0 0;
+
+  & .ftl__field {
+    display: block;
+    border: 0;
+    margin: 0;
+    padding: 0;
+
+    & .ftl__row-wrapper {
+      display: flex;
+    }
+
+    &:not(:first-child) {
+      margin: 41px 0 0;
+    }
+
+    /* &.ftl__field_fullwidth {
+      width: 100%;
+    } */
+
+    &.ftl__field_smallwidth {
+      max-width: 364px;
+    }
+
+    & .ftl__legend {
+      display: flex;
+      align-items: center;
+      font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 30px;
+      color: #fff;
+
+      &::before {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 8px;
+        width: 24px;
+        height: 24px;
+        background-color: $sectionNumberColor;
+        font-size: 16px;
+        line-height: 20px;
+        border-radius: 50%;
+      }
+
+      &.ftl__legend_first::before {
+        content: "1";
+      }
+
+      &.ftl__legend_second::before {
+        content: "2";
+      }
+
+      &.ftl__legend_third::before {
+        content: "3";
+      }
+
+      &.ftl__legend_fourth::before {
+        content: "4";
+      }
+    }
+
+    & .ftl__wrapper {
+      display: flex;
+      flex-direction: column;
+
+      &.ftl__wrapper_margin-right {
+        margin-right: 12px;
+      }
+
+      & .ftl__label {
+        margin: 16px 0 7px;
+        font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 16px;
+        color: #fff;
+      }
+
+      & .ftl__input-text {
+        box-sizing: border-box;
+        min-height: 45px;
+        padding: 5px 14px;
+        outline: none;
+      }
+
+      & .ftl__input-text_small {
+        max-width: 175px;
+      }
+
+      & .ftl__input-text::placeholder {
+        font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 16px;
+        color: #cfcfcf;
+      }
+
+      & .ftl__select-wrapper {
+        position: relative;
+        // temporary
+        &.ftl__min-height-45 {
+          min-height: 45px;
+        }
+
+        &.ftl__select-wrapper_middle {
+          max-width: 358px;
+        }
+
+        &.ftl__select-wrapper_small {
+          min-width: 172px;
+        }
+
+        &::after {
+          pointer-events: none;
+          content: "";
+          position: absolute;
+          z-index: 1;
+          top: 0;
+          right: 0;
+          width: 50px;
+          height: 100%;
+          background: url("../img/select-arrow.svg") no-repeat right 15px center,
+            linear-gradient(to right, transparent, #fff 35%);
+        }
+
+        & .ftl__select {
+          /* firefox hack to hide scrollbar */
+          scrollbar-width: none;
+
+          font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 15px;
+          line-height: 18px;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          width: 100%;
+          outline: none;
+          min-height: 45px;
+          padding: 0;
+          text-indent: 14px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          overflow: hidden;
+          border: 0;
+
+          & .ftl__select-option {
+            height: 28px;
+            font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 17px;
+            color: #000;
+            text-indent: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            cursor: pointer;
+
+            &:first-child {
+              font-size: 15px;
+              line-height: 18px;
+              height: 45px;
+              &::after {
+                pointer-events: none;
+                content: "";
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                right: 0;
+                width: 50px;
+                height: 45px;
+                background: url("../img/select-arrow-disclosed.svg") no-repeat
+                  right 15px center;
+              }
+            }
+
+            &:not(:first-child):hover {
+              background: #ef483e;
+              color: #fff;
+            }
+
+            &.ftl__select-option_default {
+              color: #cfcfcf;
+            }
+          }
+        }
+      }
+    }
+  }
+}
