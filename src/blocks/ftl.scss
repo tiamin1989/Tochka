@@ -33,6 +33,10 @@ $sectionNumberColor: #ef483e;
       }
     }
 
+    & .page__wrapper_temperature {
+      display: none;
+    }
+
     & .ftl__checkbox-wrapper {
       display: flex;
     }
@@ -103,17 +107,17 @@ $sectionNumberColor: #ef483e;
       flex-direction: column;
 
       & .ftl__input-checkbox {
-        display: none;
+        /* display: none; */
+        width: 0;
       }
 
       & .ftl__input-checkbox-pseudo {
         box-sizing: border-box;
         margin-right: 12px;
-        width: 21px;
-        height: 21px;
+        width: 24px;
+        height: 24px;
         background: transparent;
         border: 2px solid #fff;
-
 
         &.ftl__input-checkbox-pseudo_checked {
           border: 0;

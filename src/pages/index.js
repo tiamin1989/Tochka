@@ -4,8 +4,9 @@ const selectHeight = 45;
 const optionHeight = 28;
 const selects = document.querySelectorAll(".ftl__select");
 const isFirefox = typeof InstallTrigger !== "undefined";
-const temperature = document.querySelector(".ftl__input-checkbox-pseudo");
-const label = document.querySelector(".ftl__label_checkbox");
+
+const label = document.querySelector("#temperature-label");
+const pseudo = document.querySelector("#temperature-pseudo");
 
 const checkSelectColor = (select) => {
   const defaultOption = select.querySelector(".ftl__select-option_default");
@@ -40,26 +41,33 @@ const selectOnBlur = (select) => {
   select.style.height = `${selectHeight}px`;
 };
 
+const toggleCheckbox = (evt) => {
+  const temperCheckbox = document.querySelector("#temperature");
+  const temperWrapper = document.querySelector('#temperature-wrapper');
+
+  if (temperCheckbox.checked) {
+    temperWrapper.style.display = "none";
+    temperCheckbox.checked = false;
+    pseudo.classList.remove("ftl__input-checkbox-pseudo_checked");
+  } else {
+    temperWrapper.style.display = "block";
+    temperCheckbox.checked = true;
+    pseudo.classList.add("ftl__input-checkbox-pseudo_checked");
+  }
+}
+
+label.addEventListener("click", toggleCheckbox);
+pseudo.addEventListener("click", toggleCheckbox);
+
 selects.forEach((select) => {
   const options = select.querySelectorAll("option");
-
   checkSelectColor(select);
   select.addEventListener("change", (evt) => checkSelectColor(select));
   select.addEventListener("focus", (evt) => selectOnFocus(select, options));
   select.addEventListener("blur", (evt) => selectOnBlur(select));
 });
 
-function toggleCheckbox(evt) {
-  const checkbox = document.querySelector("#temperature");
-  const pseudo = document.querySelector("#temperature-pseudo");
 
-  checkbox.checked
-    ? pseudo.classList.add("ftl__input-checkbox-pseudo_checked")
-    : pseudo.classList.remove("ftl__input-checkbox-pseudo_checked");
-}
-const wrapper = document.querySelector('.ftl__wrapper');
-wrapper.addEventListener("click", toggleCheckbox);
-label.addEventListener("click", toggleCheckbox);
-temperature.addEventListener("click", toggleCheckbox);
 
-toggleCheckbox();
+
+
