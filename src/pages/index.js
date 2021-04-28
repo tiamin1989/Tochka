@@ -3,6 +3,7 @@ import * as constants from '../utils/constants';
 
 constants.label.addEventListener("click", constants.toggleCheckbox);
 constants.pseudo.addEventListener("click", constants.toggleCheckbox);
+constants.to.addEventListener("input", constants.checkAddress);
 
 constants.selects.forEach((select) => {
   const options = select.querySelectorAll("option");

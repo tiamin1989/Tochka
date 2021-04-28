@@ -56,7 +56,8 @@ $sectionNumberColor: #ef483e;
           background: url("../img/dot-grey.svg") center;
         }
 
-        & .ftl__field-address-text {
+        & .ftl__field-address-to {
+          max-width: 550px;
           font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
           font-style: normal;
           font-weight: normal;
@@ -345,6 +346,7 @@ $sectionNumberColor: #ef483e;
         }
 
         &.ftl__select-wrapper_small {
+          /* max-width: 358px; */
           min-width: 172px;
 
           @include mq(max, 440px) {
@@ -401,6 +403,7 @@ $sectionNumberColor: #ef483e;
             align-items: center;
             justify-content: flex-start;
             cursor: pointer;
+            transition: background .3s ease;
 
             &:first-child {
               font-size: 15px;
