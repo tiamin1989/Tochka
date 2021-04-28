@@ -202,8 +202,7 @@ $sectionNumberColor: #ef483e;
       flex-direction: column;
 
       & .ftl__input-checkbox {
-        /* display: none; */
-        width: 0;
+        display: none;
       }
 
       & .ftl__input-checkbox-pseudo {
