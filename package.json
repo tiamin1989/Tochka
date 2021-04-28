@@ -2,6 +2,7 @@
   "name": "tochka",
   "version": "1.0.0",
   "description": "Tochka template",
+  "author": "Ruslan Ramazanov",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",

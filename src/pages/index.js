@@ -13,7 +13,6 @@ constants.selects.forEach((select) => {
   select.addEventListener("blur", () => constants.selectOnBlur(select));
 });
 
-const datePicker = document.querySelector('#datetime');
 
 
 

@@ -5,6 +5,7 @@ export const optionHeight = 28;
 export const selects = document.querySelectorAll(".ftl__select");
 export const to = document.querySelector("#to");
 export const toText = document.querySelector(".ftl__field-address-to");
+export const address = document.querySelector(".ftl__field-address-address");
 
 export const isFirefox = typeof InstallTrigger !== "undefined";
 
@@ -70,6 +71,14 @@ export const toggleCheckbox = (evt) => {
 };
 
 export const checkAddress = (evt) => {
-  if (evt.target.value !== "") toText.textContent = evt.target.value;
-  else toText.textContent = TEXT_ADDRESS;
+  if (evt.target.value !== "") {
+    toText.textContent = evt.target.value;
+    address.classList.remove("ftl__field-address-address_grey");
+    address.classList.add("ftl__field-address-address_red");
+  }
+  else {
+    address.classList.remove("ftl__field-address-address_red");
+    address.classList.add("ftl__field-address-address_grey");
+    toText.textContent = TEXT_ADDRESS;
+  }
 };

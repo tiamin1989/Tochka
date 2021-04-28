@@ -79,7 +79,15 @@ $sectionNumberColor: #ef483e;
           content: "";
           width: 16px;
           height: 16px;
+          /* background: url("../img/dot-grey.svg") center; */
+        }
+
+        &.ftl__field-address-address_grey::before {
           background: url("../img/dot-grey.svg") center;
+        }
+
+        &.ftl__field-address-address_red::before {
+          background: url("../img/dot-red.svg") center;
         }
 
         & .ftl__field-address-to {
@@ -205,6 +213,7 @@ $sectionNumberColor: #ef483e;
         height: 24px;
         background: transparent;
         border: 2px solid #fff;
+        cursor: pointer;
 
         &.ftl__input-checkbox-pseudo_checked {
           border: 0;
@@ -238,6 +247,7 @@ $sectionNumberColor: #ef483e;
           display: flex;
           justify-content: center;
           align-items: center;
+          cursor: pointer;
         }
       }
 
