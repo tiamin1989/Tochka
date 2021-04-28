@@ -6,6 +6,10 @@ $sectionNumberColor: #ef483e;
   max-width: 730px;
   padding: 19px 0 0;
 
+  & .ftl__unvarnished-wrapper_temperature {
+    display: none;
+  }
+
   & .ftl__field {
     display: block;
     border: 0;
@@ -29,6 +33,66 @@ $sectionNumberColor: #ef483e;
           font-size: 13px;
           line-height: 16px;
           color: #ffffff;
+        }
+      }
+      & .ftl__field-address-address {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2px 11px 2px 36px;
+        position: relative;
+        margin: 5px 0 0;
+        background: #4b4b4f;
+        min-height: 45px;
+
+        &::before {
+          position: absolute;
+          top: 0;
+          left: -2px;
+          margin: 15px;
+          content: "";
+          width: 16px;
+          height: 16px;
+          background: url("../img/dot-grey.svg") center;
+        }
+
+        & .ftl__field-address-text {
+          font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 15px;
+          line-height: 19px;
+          color: #cfcfcf;
+        }
+
+        & .ftl__field-address-button {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 4px 13px 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-transform: uppercase;
+          font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 13px;
+          line-height: 16px;
+          text-align: center;
+          letter-spacing: 0.05em;
+          color: #ffffff;
+          background: #717174;
+          border: 0;
+          border-radius: 2px;
+          cursor: pointer;
+        }
+
+        & .ftl__field-address-button:hover {
+          filter: opacity(.5);
+        }
+
+        & .ftl__field-address-addr-input {
+          background: transparent;
         }
       }
     }
@@ -166,6 +230,42 @@ $sectionNumberColor: #ef483e;
         line-height: 18px;
         color: #000;
 
+        &::-webkit-input-placeholder {
+          font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 15px;
+          line-height: 18px;
+          color: #cfcfcf;
+        }
+
+        &::-moz-placeholder {
+          font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 15px;
+          line-height: 18px;
+          color: #cfcfcf;
+        }
+
+        &:-ms-input-placeholder {
+          font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 15px;
+          line-height: 18px;
+          color: #cfcfcf;
+        }
+
+        &::-ms-input-placeholder {
+          font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 15px;
+          line-height: 18px;
+          color: #cfcfcf;
+        }
+
         &::placeholder {
           font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
           font-style: normal;
@@ -182,6 +282,42 @@ $sectionNumberColor: #ef483e;
         @include mq(max, 440px) {
           max-width: 167px;
         }
+      }
+
+      & .ftl__input-text::-webkit-input-placeholder {
+        font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 16px;
+        color: #cfcfcf;
+      }
+
+      & .ftl__input-text::-moz-placeholder {
+        font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 16px;
+        color: #cfcfcf;
+      }
+
+      & .ftl__input-text:-ms-input-placeholder {
+        font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 16px;
+        color: #cfcfcf;
+      }
+
+      & .ftl__input-text::-ms-input-placeholder {
+        font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 16px;
+        color: #cfcfcf;
       }
 
       & .ftl__input-text::placeholder {
