@@ -22,6 +22,42 @@ $sectionNumberColor: #ef483e;
     outline: none;
     min-height: 80px;
 
+    &::-webkit-input-placeholder {
+      font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 18px;
+      color: #cfcfcf;
+    }
+
+    &::-moz-placeholder {
+      font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 18px;
+      color: #cfcfcf;
+    }
+
+    &:-ms-input-placeholder {
+      font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 18px;
+      color: #cfcfcf;
+    }
+
+    &::-ms-input-placeholder {
+      font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 18px;
+      color: #cfcfcf;
+    }
+
     &::placeholder {
       font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
       font-style: normal;
@@ -69,7 +105,7 @@ $sectionNumberColor: #ef483e;
         position: relative;
         margin: 5px 0 0;
         background: #4b4b4f;
-        min-height: 45px;
+        min-height: 40px;
 
         &::before {
           position: absolute;
@@ -79,7 +115,6 @@ $sectionNumberColor: #ef483e;
           content: "";
           width: 16px;
           height: 16px;
-          /* background: url("../img/dot-grey.svg") center; */
         }
 
         &.ftl__field-address-address_grey::before {
@@ -123,7 +158,8 @@ $sectionNumberColor: #ef483e;
         }
 
         & .ftl__field-address-pseudo-button:hover {
-          filter: opacity(0.5);
+          -webkit-filter: opacity(0.5);
+                  filter: opacity(0.5);
         }
       }
     }
