@@ -275,6 +275,7 @@ $sectionNumberColor: #ef483e;
         font-size: 13px;
         line-height: 16px;
         color: #fff;
+        flex-wrap: nowrap;
 
         &.ftl__label_checkbox {
           height: 100%;
