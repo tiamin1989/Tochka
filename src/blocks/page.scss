@@ -17,6 +17,31 @@ $fontColor: #fff;
     padding: 0 16px 0;
   }
 
+  & .page__wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    @include mq(max, 960px) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  & .page__paragraph {
+    max-width: 300px;
+    padding: 24px;
+    margin: 0;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #ffffff;
+    background: #4b4b4f;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
   & .page__title {
     margin: 0;
     color: $fontColor;
@@ -32,5 +57,3 @@ $fontColor: #fff;
     }
   }
 }
-
-

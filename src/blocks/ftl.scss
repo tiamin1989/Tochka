@@ -4,7 +4,33 @@ $sectionNumberColor: #ef483e;
 
 .ftl {
   max-width: 730px;
-  padding: 19px 0 0;
+  padding: 19px 0 129px;
+  flex-grow: 1;
+
+  @include mq(max, 960px) {
+    padding: 19px 0 40px;
+  }
+
+  & .ftl__textarea {
+    padding: 13px 14px 13px;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000;
+    outline: none;
+    min-height: 80px;
+
+    &::placeholder {
+      font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 18px;
+      color: #cfcfcf;
+    }
+  }
 
   & .ftl__unvarnished-wrapper_temperature {
     display: none;
@@ -66,7 +92,7 @@ $sectionNumberColor: #ef483e;
           color: #cfcfcf;
         }
 
-        & .ftl__field-address-button {
+        & .ftl__field-address-pseudo-button {
           box-sizing: border-box;
           margin: 0;
           padding: 4px 13px 4px;
@@ -88,12 +114,8 @@ $sectionNumberColor: #ef483e;
           cursor: pointer;
         }
 
-        & .ftl__field-address-button:hover {
-          filter: opacity(.5);
-        }
-
-        & .ftl__field-address-addr-input {
-          background: transparent;
+        & .ftl__field-address-pseudo-button:hover {
+          filter: opacity(0.5);
         }
       }
     }
@@ -403,7 +425,7 @@ $sectionNumberColor: #ef483e;
             align-items: center;
             justify-content: flex-start;
             cursor: pointer;
-            transition: background .3s ease;
+            transition: background 0.3s ease;
 
             &:first-child {
               font-size: 15px;
