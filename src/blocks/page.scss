@@ -14,7 +14,7 @@ $fontColor: #fff;
   }
 
   @include mq(max, 440px) {
-    padding: 0 16px 0;
+    padding: 0 16px 0 16px;
   }
 
   & .page__wrapper {

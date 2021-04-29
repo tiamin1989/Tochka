@@ -125,16 +125,6 @@ $sectionNumberColor: #ef483e;
           background: url("../img/dot-red.svg") center;
         }
 
-        & .ftl__field-address-to {
-          max-width: 550px;
-          font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-          font-style: normal;
-          font-weight: normal;
-          font-size: 15px;
-          line-height: 19px;
-          color: #cfcfcf;
-        }
-
         & .ftl__field-address-pseudo-button {
           box-sizing: border-box;
           margin: 0;
@@ -155,21 +145,45 @@ $sectionNumberColor: #ef483e;
           border: 0;
           border-radius: 2px;
           cursor: pointer;
+          /* class selector not work... */
+          & #date {
+            margin: 0;
+            padding: 0;
+            width: 68px;
+            display: none;
+            background: transparent;
+            outline: none;
+            border: 0;
+            color: #fff;
+            font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 16px;
+          }
         }
 
         & .ftl__field-address-pseudo-button:hover {
           -webkit-filter: opacity(0.5);
-                  filter: opacity(0.5);
+          filter: opacity(0.5);
+        }
+
+        & .ftl__field-address-pseudo-button.ftl__field-address-pseudo-button_disabled {
+          -webkit-filter: opacity(0.5);
+          filter: opacity(0.5);
+          pointer-events: none;
+        }
+
+        & .ftl__field-address-to {
+          max-width: 550px;
+          font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 15px;
+          line-height: 19px;
+          color: #cfcfcf;
         }
       }
-    }
-
-    & .page__wrapper_temperature {
-      display: none;
-    }
-
-    & .ftl__checkbox-wrapper {
-      display: flex;
     }
 
     & .ftl__row-wrapper {
@@ -414,7 +428,6 @@ $sectionNumberColor: #ef483e;
         }
 
         &.ftl__select-wrapper_small {
-          /* max-width: 358px; */
           min-width: 172px;
 
           @include mq(max, 440px) {

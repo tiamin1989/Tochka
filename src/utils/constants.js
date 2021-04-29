@@ -7,6 +7,8 @@ export const to = document.querySelector("#to");
 export const toText = document.querySelector(".ftl__field-address-to");
 export const address = document.querySelector(".ftl__field-address-address");
 
+export const addressButton = document.querySelector(".ftl__field-address-pseudo-button");
+
 export const isFirefox = typeof InstallTrigger !== "undefined";
 
 export const label = document.querySelector("#temperature-label");
@@ -43,8 +45,7 @@ export const selectOnFocus = (select, options) => {
         optionHeight * (options.length - 1) + selectHeight + 7
       }px`);
    if (getWidthByText(select, SYMBOL_WIDTH) > Number(select.getAttribute("defaultWidth"))) {
-     console.log('длина текста', getWidthByText(select, SYMBOL_WIDTH));
-    select.style.width = `${getWidthByText(select, SYMBOL_WIDTH)}px`
+    select.style.width = `${getWidthByText(select, SYMBOL_WIDTH)}px`;
    }
 };
 
@@ -75,10 +76,12 @@ export const checkAddress = (evt) => {
     toText.textContent = evt.target.value;
     address.classList.remove("ftl__field-address-address_grey");
     address.classList.add("ftl__field-address-address_red");
+    addressButton.classList.remove("ftl__field-address-pseudo-button_disabled");
   }
   else {
     address.classList.remove("ftl__field-address-address_red");
     address.classList.add("ftl__field-address-address_grey");
     toText.textContent = TEXT_ADDRESS;
+    addressButton.classList.add("ftl__field-address-pseudo-button_disabled");
   }
 };
